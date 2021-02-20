@@ -1,4 +1,5 @@
 import React from "react";
+import BadgeComp from "../base/BadgeComp";
 
 function Title(props) {
   const { title, date, number, user } = props;

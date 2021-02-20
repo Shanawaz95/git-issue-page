@@ -11,7 +11,9 @@ function Comment(props) {
           <CommentIcon
             style={{ height: "15px", width: "15px", margin: "3px" }}
           ></CommentIcon>
-          <span style={{ fontSize: "small" }}>{comment}</span>
+          <span style={{ fontSize: "small", marginLeft: "auto" }}>
+            {comment}
+          </span>
         </>
       ) : null}
     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import List from "./components/List";
+import PaginationComp from "./components/Pagination";
 
 export const dataContext = React.createContext();
 
@@ -16,11 +17,12 @@ function App() {
       .then((result) => {
         setFetchResult(result);
       });
-  }, [setFetchResult]);
+  }, [page]);
   return (
     <div>
       <dataContext.Provider value={fetchResult}>
         <List></List>
+        <PaginationComp page={page} setpage={setpage}></PaginationComp>
       </dataContext.Provider>
     </div>
   );

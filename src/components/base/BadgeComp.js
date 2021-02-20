@@ -10,11 +10,10 @@ function BadgeComp(props) {
       {labels.length != 0
         ? labels.map((val, id) => {
             const col = "#" + val.color;
-            console.log(col);
             return (
               <Badge
                 key={id}
-                style={{ backgroundColor: { col }, borderRadius: "30px" }}
+                style={{ backgroundColor: col, borderRadius: "30px" }}
                 className="custBadge"
                 variant="primary"
               >
